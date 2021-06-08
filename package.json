@@ -1,6 +1,7 @@
 {
   "name": "assignment-git",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "mocha"
@@ -11,18 +12,5 @@
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.7"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hh-kigcasan/git-commands.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/hh-kigcasan/git-commands/issues"
-  },
-  "homepage": "https://github.com/hh-kigcasan/git-commands#readme",
-  "description": ""
+  }
 }

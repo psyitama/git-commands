@@ -10,7 +10,22 @@ class GitCommand {
     }
 
     //Command: git status
-    // status(){}
+    status() {
+        let status = '';
+        let files = '';
+        let counter = 0;
+        for (const property in this.working_directory.new_changes) {
+            counter++;
+            files += `\n${property}`;
+        }
+
+        if (counter == 0) {
+            status = `You have ${counter} change/s.\n`;
+        } else {
+            status = `You have ${counter} change/s.${files}`;
+        }
+        return status;
+    }
 
     //Command: git add <filename/file directory/wildcard>
     add(path_file) {
@@ -19,10 +34,18 @@ class GitCommand {
         if (modified_files[path_file]) {
             this.staging.push(modified_files[path_file]);
             delete modified_files[path_file];
+        } else if (path_file == '.') {
+            this.staging.push(modified_files);
+            this.working_directory.new_changes = {};
+        } else if (path_file == '*') {
+            let file_list = Object.keys(modified_files);
+            for (let row = 0; row < file_list.length; row++) {
+                if (!file_list[row].startsWith('.')) {
+                    this.staging.push(modified_files[file_list[row]]);
+                    delete this.working_directory.new_changes[file_list[row]];
+                }
+            }
         } else {
-            /*
-            Create logic here and run unit testing.
-        */
             return `Failed to add ${path_file}! File is not modified or missing.`;
         }
         return 'Successfully added as index file/s.';
