@@ -24,5 +24,8 @@
     "url": "https://github.com/hh-kigcasan/git-commands/issues"
   },
   "homepage": "https://github.com/hh-kigcasan/git-commands#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ci": "^2.1.1"
+  }
 }
