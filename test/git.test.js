@@ -57,8 +57,7 @@ describe('Testing add()', function () {
         git.init();
 
         let output_add = git.add('*');
-        // let output_status = git.status();
-        let output_status = null;
+        let output_status = git.status();
 
         expect(output_add).to.equal('Successfully added as index file/s.');
         expect(output_status).to.equal(
