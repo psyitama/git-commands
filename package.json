@@ -1,31 +1,22 @@
 {
-  "name": "assignment-git",
+  "name": "git-commands-v2",
   "version": "1.0.0",
+  "description": "Now that you learned how to perform git commands and pull-request, we will now do another practice.",
   "main": "app.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "author": "Karen Marie Igcasan",
-  "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
-    "nodemon": "^2.0.7"
-  },
   "directories": {
     "test": "test"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hh-kigcasan/git-commands.git"
+    "url": "git+https://github.com/psyitama/git-commands.git"
   },
-  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hh-kigcasan/git-commands/issues"
+    "url": "https://github.com/psyitama/git-commands/issues"
   },
-  "homepage": "https://github.com/hh-kigcasan/git-commands#readme",
-  "description": "",
-  "dependencies": {
-    "ci": "^2.1.1"
-  }
+  "homepage": "https://github.com/psyitama/git-commands#readme"
 }
